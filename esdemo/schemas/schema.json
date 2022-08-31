@@ -6,8 +6,8 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "traffic_profile": {
-            "description": "Traffic Profile",
+        "ctf_json_args": {
+            "description": "Args for the CTF Json",
             "type": "array",
             "minItems": 0,
             "uniqueItems": true,
