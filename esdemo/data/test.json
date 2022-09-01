@@ -1,1 +1,10 @@
-{"ctf_json_args":{"test_config":{"ors":{"tCpDl":350000}}},"pcap_cache_mode":"overwrite"}
+{
+  "ctf_json_args": {
+    "test_config": {
+      "ors": {
+        "tCpDl": 350000
+      }
+    }
+  },
+  "pcap_cache_mode": "overwrite"
+}
