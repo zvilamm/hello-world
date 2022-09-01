@@ -8,81 +8,32 @@
     "properties": {
         "ctf_json_args": {
             "description": "Args for the CTF Json",
-            "type": "array",
-            "minItems": 0,
-            "uniqueItems": true,
-            "items": {
-                "type": "object",
-                "additionalProperties": false,
-                "properties": {
-                    "from_device_id": {
-                        "type": "integer"
-                    },
-                    "to_device_id": {
-                        "type": "integer"
-                    },
-                    "from_netns": {
-                        "type": "string"
-                    },
-                    "to_netns": {
-                        "type": "string"
-                    },
-                    "bandwidth": {
-                        "type": "integer"
-                    },
-                    "threshold": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {
-                            "throughput": {
-                                "type": "number"
-                            },
-                            "lost_datagrams": {
-                                "type": "number"
+            "type": "object",
+            "properties": {
+                "test_config":{
+                    "description": "Test Configuration",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties":{
+                        "ors": {
+                            "description": "Test Configuration",
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "tCpDl" : {
+                                    "type": "integer"
+                                }
                             }
-                        },
-                        "required": [
-                            "throughput",
-                            "lost_datagrams"
-                        ]
-                    },
-                    "port": {
-                        "type": "integer"
-                    },
-                    "traffic_type": {
-                        "type": "string",
-                        "enum": [
-                            "TCP",
-                            "UDP"
-                        ]
-                    },
-                    "direction": {
-                        "type": "string",
-                        "enum": [
-                            "bi"
-                        ]
-                    },
-                    "packet_size": {
-                        "type": "string"
-                    },
-                    "time": {
-                        "type": "integer"
+                        }
                     }
-                },
-                "required": [
-                    "from_device_id",
-                    "to_device_id",
-                    "from_netns",
-                    "to_netns",
-                    "bandwidth",
-                    "threshold",
-                    "port",
-                    "traffic_type",
-                    "direction",
-                    "packet_size",
-                    "time"
-                ]
+                }
             }
+        },
+        "pcap_cache_mode":{
+            "type": "string"
         }
     }
 }
+            
+                
+               
