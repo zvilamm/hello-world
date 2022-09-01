@@ -30,7 +30,8 @@
             }
         },
         "pcap_cache_mode":{
-            "type": "string"
+            "type": "string",
+            "enum": ["overwrite", "merge"]
         }
     }
 }
